@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tak-Toe</title>
+    <link rel="stylesheet" type="text/css" href="tttstyle.css">
+</head>
+<body>
+    <div class="msg-container hide">
+        <p id="msg"> Winner</p>
+    </div>
+    <main>
+        <h1>Tic-Tak-Toe
+            <button id="theme-switch">
+      🌙
+    </button>
+        </h1>
+        <div class="container">
+            <div class="game">
+                
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <br>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <br>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <button id="Reset-button">Reset Game</button>
+       <button id="new-btn">New Game</button>
+    </main>
+   <script src="app.js"></script> 
+   <script>
+    const btn = document.getElementById('theme-switch');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
